@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+</head>
+<body>
+{#<form action="/dologin" method="get">#}
+{#    name: <input type="text" name="username" required><br>#}
+{#    psw: <input type="password" name = "pwd" required><br>#}
+{#    age: <input type="number" name = "age" required><br>#}
+{#    <input type="submit" value="登录">#}
+{#</form>#}
+<form action="/login" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit" />
+
+</form>
+</body>
+</html>
